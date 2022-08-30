@@ -72,6 +72,7 @@
   <project path="external/scudo" name="AOSPA/android_external_scudo" remote="aospa" />
   <remove-project name="platform/external/zlib" />
   <project path="external/zlib" name="AOSPA/android_external_zlib" remote="aospa" />
+  <project path="external/faceunlock" name="android_external_faceunlock" remote="sweet" />
 
   <!-- External (ProtonAOSP) -->
   <project path="external/colorkt" name="AOSPA/android_external_colorkt" remote="aospa" />
@@ -79,19 +80,26 @@
 
   <!-- Frameworks -->
   <remove-project name="platform/frameworks/av" />
-  <project path="frameworks/av" name="AOSPA/android_frameworks_av" remote="aospa" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="sweet" />
   <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="AOSPA/android_frameworks_base" remote="aospa" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="sweet" />
   <remove-project name="platform/frameworks/native" />
-  <project path="frameworks/native" name="AOSPA/android_frameworks_native" remote="aospa" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="sweet" />
+  <remove-project name="platform/frameworks/libs/systemui" />
+  <project patch="platform/frameworks/libs/systemui" name="android_platform/frameworks_libs_systemui" remote="sweet" />
 
+  <!-- HAL -->
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="android_vendor_qcom_opensource_audio-hal_primary-hal" remote="sweet" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="sweet" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="sweet" />
 
   <!-- Hardware -->
   <remove-project name="platform/hardware/libhardware" />
   <project path="hardware/libhardware" name="AOSPA/android_hardware_libhardware" remote="aospa" />
-
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="sweet" />
+  
   <!-- Manifest -->
-  <project path="manifest" name="AOSPA/manifest" remote="aospa" />
+  <project path="manifest" name="manifest" remote="sweet" />
 
   <!-- Packages (AOSP) -->
   <remove-project name="platform/packages/providers/MediaProvider" />
@@ -104,17 +112,19 @@
 
   <!-- Packages -->
   <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Settings" name="AOSPA/android_packages_apps_Settings" remote="aospa" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="sweet" />
   <remove-project name="platform/packages/apps/SettingsIntelligence" />
   <project path="packages/apps/SettingsIntelligence" name="AOSPA/android_packages_apps_SettingsIntelligence" remote="aospa" />
   <remove-project name="platform/packages/apps/ThemePicker" />
-  <project path="packages/apps/ThemePicker" name="AOSPA/android_packages_apps_ThemePicker" remote="aospa" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="sweet" />
   <remove-project name="platform/packages/apps/Launcher3" />
-  <project path="packages/apps/Launcher3" name="AOSPA/android_packages_apps_Launcher3" remote="aospa" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="sweet" />
   <remove-project name="platform/packages/modules/CellBroadcastService" />
   <project path="packages/modules/CellBroadcastService" name="AOSPA/android_packages_modules_CellBroadcastService" remote="aospa" />
   <remove-project name="platform/packages/services/Telecomm" />
-  <project path="packages/services/Telecomm" name="AOSPA/android_packages_services_Telecomm" remote="aospa" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="sweet" />
+  <project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="sweet" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="sweet" />
 
   <!-- Prebuilts -->
   <remove-project name="platform/prebuilts/clang/host/linux-x86" />
@@ -141,7 +151,7 @@
   <remove-project name="platform/system/sepolicy" />
   <project path="system/sepolicy" name="AOSPA/android_system_sepolicy" remote="aospa" />
   <remove-project name="platform/system/vold" />
-  <project path="system/vold" name="AOSPA/android_system_vold" remote="aospa" />
+  <project path="system/vold" name="android_system_vold" remote="sweet" />
 
   <!-- Repainter (kdrag0n) -->
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="github" revision="main" />
@@ -152,11 +162,12 @@
   <!-- Vendor (AOSPA) -->
   <project path="vendor/google/gms" name="android_vendor_google_gms" remote="blobs-gitlab" />
   <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="blobs" />
-  <project path="vendor/aospa" name="AOSPA/android_vendor_aospa" remote="aospa" >
+  <project path="vendor/aospa" name="android_vendor_aospa" remote="sweet" >
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="blobs" />
   <project path="vendor/qcom/sdclang" name="proprietary_vendor_qcom_sdclang" remote="blobs" revision="12" />
+  <project path="vendor/support" name="vendor_support" remote="sweet" />
 
   <!-- Vendor (NXP) -->
   <remove-project name="platform/vendor/nxp/opensource/halimpl" />

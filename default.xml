@@ -23,6 +23,11 @@
   <include name="system.xml"/>
   <include name="vendor.xml"/>
 
+  <!-- AOSPA Sweet -->
+  <remote  name="sweet"
+           fetch="https://github.com/AOSPA-sweet"
+           revision="sapphire" />
+
   <!-- AOSPA -->
   <remote  name="aospa"
            fetch=".."
