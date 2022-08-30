@@ -86,7 +86,7 @@
   <remove-project name="platform/frameworks/native" />
   <project path="frameworks/native" name="android_frameworks_native" remote="sweet" />
   <remove-project name="platform/frameworks/libs/systemui" />
-  <project patch="platform/frameworks/libs/systemui" name="android_platform/frameworks_libs_systemui" remote="sweet" />
+  <project patch="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="sweet" />
 
   <!-- Hardware -->
   <remove-project name="platform/hardware/libhardware" />
